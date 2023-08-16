@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #3490dc, #9b59b6);
+}
+h2 {
+    color: #fff;
+}
+
+.container {
+    background-color: #fff;
+    opacity: 0.8;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    padding-left: 20px;
+    width: 300px;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.containererror {
+    background-color: #fff;
+    opacity: 0.8;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    padding-left: 20px;
+    width: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.error a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* form {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="name"],
+form input[type="text"],
+form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+form button[type="submit"],
+form button[type="text"] {
+    background-color: #3490dc;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button[type="submit"]:hover {
+    background-color: #2779bd;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#remember {
+    margin-bottom: 20px;
+}
