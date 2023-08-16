@@ -46,13 +46,6 @@ h2 {
     text-decoration: none;
 }
 
-/* form {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-} */
 form label {
     display: block;
     font-weight: bold;
