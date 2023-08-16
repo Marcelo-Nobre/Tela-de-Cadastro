@@ -31,7 +31,8 @@ Route::get('/error', function () {
 
 
 Route::get('/', [CadastroController::class, 'index'])->name('cadastro');
-Route::post('/', [CadastroController::class, 'create']);
+Route::post('/', [CadastroController::class, 'create'])->name('cadastro.create');
+
 
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

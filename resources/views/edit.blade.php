@@ -15,28 +15,31 @@
 
             <div>
                 <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" value="{{ $cadastro->name }}" required autofocus>
+                <input type="text" id="name" name="name" value="{{ $cadastro->name }}" pattern="^(?!\s*$).+"
+                    required autofocus>
             </div>
 
             <div>
                 <label for="phone">Telefone:</label>
-                <input type="text" id="phone" name="phone" value="{{ $cadastro->phone }}"
-                    oninput="formatPhoneNumber(this)" onblur="this.value = unformatPhoneNumber(this.value)" required>
-                <script src="{{ asset('js/phone.js') }}"></script>
+                <input type="text" id="phone" name="phone" class="phone_with_ddd"
+                    value="{{ $cadastro->phone }}" pattern="^(?!\s*$).+" required>
+
             </div>
             <div>
                 <label for="address">Endereço:</label>
-                <input type="text" id="address" name="address" value="{{ $cadastro->address }}" required>
+                <input type="text" id="address" name="address" value="{{ $cadastro->address }}"
+                    pattern="^(?!\s*$).+" required>
             </div>
             <div>
                 <label for="date">Data de Nascimento:</label>
-                <input type="date" id="date" name="date" value="{{ $cadastro->date }}" required>
+                <input type="date" id="date" name="date" value="{{ $cadastro->date }}" pattern="^(?!\s*$).+"
+                    format="Y-m-d" max="{{ date('Y-m-d') }}" required>
             </div>
             <div>
                 <label for="cpf">CPF:</label>
                 <input type="text" id="cpf" name="cpf" value="{{ $cadastro->cpf }}"
-                    oninput="formatCPF(this)" onblur="this.value = unformatCPF(this.value)" required>
-                <script src="{{ asset('js/cpf.js') }}"></script>
+                    pattern="^(?!\s*$).+"required>
+
             </div>
 
             <div>
@@ -44,6 +47,15 @@
             </div>
         </form>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>
+        $('.phone_with_ddd').mask('(00) 00000-0000');
+
+        $('#cpf').mask('000.000.000-00', {
+            reverse: true
+        });
+    </script>
 </body>
 
 </html>

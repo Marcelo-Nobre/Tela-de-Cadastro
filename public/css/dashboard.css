@@ -37,8 +37,10 @@ body {
     background-color: transparent;
 }
 
-.delete-btn {
-    padding-top: 10px;
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .delete-btn i {
@@ -66,6 +68,9 @@ body {
 .table ul {
     text-align: left;
 }
+.form-group {
+    margin: 0 !important;
+}
 
 /* RESPONSIVO */
 @media (max-width: 425px) {
@@ -91,9 +96,12 @@ body {
         margin-top: 15px;
         text-transform: uppercase;
     }
-
-    .table-container {
+    .form-group .table-container {
         padding: 0;
+    }
+
+    .form-group {
+        margin: 0 !important;
     }
 
     .table td,

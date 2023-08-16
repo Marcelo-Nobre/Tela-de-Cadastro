@@ -40,6 +40,7 @@
                                 <th scope="col">Data de Nascimento</th>
                                 <th scope="col">CPF</th>
                                 <th scope="col">Ações</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,27 +49,27 @@
                                     <td>{{ $cadastro->name }}</td>
                                     <td>{{ $cadastro->phone }}</td>
                                     <td>{{ $cadastro->address }}</td>
-                                    <td>{{ $cadastro->date }}</td>
+                                    <td>
+                                        {{ \Carbon\Carbon::createFromFormat('Y-m-d', $cadastro->date)->format('d/m/Y') }}
+                                    </td>
                                     <td>{{ $cadastro->cpf }}</td>
 
-                                    <td>
+
+                                    <td class="actions">
                                         <form action="{{ route('dashboard') }}" method="POST"
                                             class="form-group update-form">
                                             <input type="hidden" name="type" value="update">
                                             <input type="hidden" name="id" value="">
 
-
-
-                                            <a href="{{ route('dashboard.edit', $cadastro->id) }}" class="update-btn">
-                                                {{-- class="update-btn" --}}
-                                                <i class="fas fa-sync-alt"></i>
-                                            </a>
-
-
+                                            <button href="{{ route('dashboard.edit', $cadastro->id) }}"
+                                                class="update-btn">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
 
                                         </form>
-                                    </td>
-                                    <td>
+
+
+
                                         <form action="{{ route('dashboard.destroy', $cadastro->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -79,6 +80,7 @@
                                             </button>
                                         </form>
                                     </td>
+
                                 </tr>
                             @endforeach
 

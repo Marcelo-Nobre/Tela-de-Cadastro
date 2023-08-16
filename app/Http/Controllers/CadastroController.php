@@ -77,9 +77,7 @@ class CadastroController extends Controller
 
     public function update(Request $request, Cadastro $cadastro)
     {
-        //após o update retorna para a dashboard
-        // $cadastro->update($request->all());
-        // return redirect()->route('dashboard');
+        //
     }
 
 
