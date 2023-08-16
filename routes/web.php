@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('cadastro');
 })->name('cadastro');
 
-// Route::get('/', [CadastroController::class, 'update'])->name('cadastro.update');
+Route::get('/', [CadastroController::class, 'update'])->name('cadastro.update');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

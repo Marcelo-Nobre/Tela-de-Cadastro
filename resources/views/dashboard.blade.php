@@ -61,10 +61,9 @@
                                             <input type="hidden" name="type" value="update">
                                             <input type="hidden" name="id" value="">
 
-                                            <button href="{{ route('dashboard.edit', $cadastro->id) }}"
-                                                class="update-btn">
+                                            <a href="{{ route('dashboard.edit', $cadastro->id) }}" class="update-btn">
                                                 <i class="fa-solid fa-pen-to-square"></i>
-                                            </button>
+                                            </a>
 
                                         </form>
 
